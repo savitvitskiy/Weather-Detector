@@ -38,11 +38,14 @@
     <div class="col-md-6 col-md-offset-3">
       <h1>{{city.capitalize}}</h1>
       <h3>Country code : {{data.country_code}}</h3>
-      <h5>Coordinate : {{data.coordinates}}</h5>
-      <h5>Temperature : {{data.temperature}} (feels like : {{data.temperature_feels_like}})</h5>
-      <h5>Temperature minimum & maximum : {{data.temperature_min}} - {{data.temperature_max}}</h5>
+      <h5>Coordinates (Longitude / Latitude) : {{data.coordinates}}</h5>
+      <br/>
+      <h5>Temperature : {{data.temperature}}</h5>
+      <h5>Feels Like : {{data.temperature_feels_like}}</h5>
+      <h5>Minimum / Maximum : {{data.temperature_min}} / {{data.temperature_max}}</h5>
+      <br/>
       <h5>Weather : {{data.weather}}</h5>
-      <h5>Wind speed : {{data.wind_speed}}</h5>
+      <h5>Wind Speed : {{data.wind_speed}}</h5>
       <h5>Humidity : {{data.humidity}}</h5>
     </div>
     {% endif %}

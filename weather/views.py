@@ -11,14 +11,14 @@ def index(request):
         json_data = json.loads(res)
         data = {
             "country_code": str(json_data["sys"]["country"]),
-            "coordinates": str(json_data["coord"]["lon"]) + ' ' + str(json_data["coord"]["lat"]),
-            "temperature": str(round((json_data["main"]["temp"])-273.15)) + 'C',
-            "temperature_feels_like": str(round(json_data["main"]["feels_like"]-273.15)) + 'C',
-            "temperature_min": str(round(json_data["main"]["temp_min"] - 273.15)) + 'C',
-            "temperature_max": str(round(json_data["main"]["temp_max"] - 273.15)) + 'C',
+            "coordinates": str(json_data["coord"]["lon"]) + ' / ' + str(json_data["coord"]["lat"]),
+            "temperature": str(round((json_data["main"]["temp"])-273.15)) + 'C°',
+            "temperature_feels_like": str(round(json_data["main"]["feels_like"]-273.15)) + 'C°',
+            "temperature_min": str(round(json_data["main"]["temp_min"] - 273.15)) + 'C°',
+            "temperature_max": str(round(json_data["main"]["temp_max"] - 273.15)) + 'C°',
             "wind_speed": str(json_data["wind"]["speed"]) + ' m/s',
-            "weather": str(json_data["weather"][0]["description"]),
-            "humidity": str(json_data["main"]["humidity"]) + ' %',
+            "weather": str(json_data["weather"][0]["description"]).capitalize(),
+            "humidity": str(json_data["main"]["humidity"]) + '%',
         }
     else:
         city = ""
